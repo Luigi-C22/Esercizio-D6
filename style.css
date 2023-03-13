@@ -1,0 +1,149 @@
+body{
+    display: flex;
+    min-width: 100vh;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+/*impostazione del frame di fondo*/
+.card-sfondo{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border-radius: 25px;
+    overflow: hidden;
+         
+}
+/*impostazione del formato foto*/
+.formato-foto{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*impostazione dell'opacità*/
+.card-sfondo:hover .formato-foto{
+    opacity: .7;
+}
+
+.formato-foto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/*impostazione del movimento del tasto SAVE*/
+.card-sfondo:hover .tasto-save{
+    transform: translateY(0px);
+}
+.tasto-save{ 
+    position: absolute;
+    border-radius: 40px;
+    transform: translateY(-100px);
+    transition: transform .2s;     
+    padding: 20px;
+    background-color: red;
+    color: white;
+    z-index: 3;
+    font-size: 20px;
+    font-weight: 600;
+    right: 20px;
+    top: 20px;
+}
+
+/*impostazione di transizione della prima icona*/
+.card-sfondo:hover .opzione1{
+    transform: translateY(-100px);
+}
+
+.opzione1{
+    position: absolute;
+    width: 30px;
+    top: 550px;
+    left: 20px;
+    padding: 8px;
+    border-top-left-radius:  50%;
+    border-bottom-left-radius: 50%;
+    transform: translateX(10px);
+    transition: transform .4s;
+    background-color: white;
+    font-size: 10px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+/*impostazione di transizione dell'icona con il nome della foto*/
+.card-sfondo:hover .nome-foto{
+    transform: translateY(-100px);
+}
+.nome-foto {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    top: 550px;
+    left: 60px;
+    padding: 8px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform: translateX(10px);
+    transition: transform .4s;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 4;
+}
+
+/*impostazioni di transizione della seconda icona*/
+.card-sfondo:hover .opzione2{
+    transform: translateY(-100px);
+}
+.opzione2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 550px;
+    left: 230px;
+    padding: 8px;
+    border-radius: 50%;
+    transform: translateX(30px);
+    transition: transform .4s;
+    background-color: white;
+    font-size: 30px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+/*impostazioni di transizione della terza icona*/
+.card-sfondo:hover .opzione3{
+    transform: translateY(-100px);
+}
+.opzione3{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 550px;
+    left: 280px;
+    padding: 8px;
+    border-radius: 50%;
+    transform: translateX(40px);
+    transition: transform .4s;
+    background-color: white;
+    font-size: 30px;
+    overflow: hidden;
+    z-index: 3;
+}
